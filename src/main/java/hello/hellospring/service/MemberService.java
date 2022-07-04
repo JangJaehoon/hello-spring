@@ -9,8 +9,11 @@ import java.util.Optional;
 
 public class MemberService {
 
-    private final MemberRepository memberRepository
-            = new MemoryMemberRepository();
+    private final MemberRepository memberRepository; // = new MemoryMemberRepository();
+
+    MemberService(MemberRepository memberRepository){
+        this.memberRepository = memberRepository;
+    } // Dependency Injection : MemberService의 입장에선 MemberRepository를 넣어줌.
 
     /**
      * 회원 가입
