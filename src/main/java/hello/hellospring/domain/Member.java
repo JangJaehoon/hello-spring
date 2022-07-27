@@ -1,7 +1,9 @@
 package hello.hellospring.domain;
 
-public class Member {
+import org.springframework.stereotype.Service;
 
+@Service
+public class Member {
     private Long id;
     private String name;
 
